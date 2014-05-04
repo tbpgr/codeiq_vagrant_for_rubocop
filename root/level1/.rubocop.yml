@@ -10,3 +10,5 @@ TrailingBlankLines:
   EnforcedStyle: final_blank_line
 TrailingBlankLines:
   Enabled: false
+EndOfLine:
+  Enabled: false
