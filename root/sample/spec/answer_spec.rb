@@ -22,6 +22,9 @@ describe Answer do
 
           # -- when --
           actual = File.read("./lib/answer.rb")
+          puts "%%%%%%%%%%%%%%%%%%%%%%%"
+          puts "ソースコードサイズ=#{actual.size}"
+          puts "%%%%%%%%%%%%%%%%%%%%%%%"
 
           # -- then --
           expect(actual.size).to be <= c[:max]
@@ -48,17 +51,17 @@ describe Answer do
         max: 6,
       },
       {
-        case_no: 1,
+        case_no: 2,
         case_title: "警告12種類で悪党突破",
         max: 12,
       },
       {
-        case_no: 1,
+        case_no: 3,
         case_title: "警告18種類で極悪人突破",
         max: 18,
       },
       {
-        case_no: 1,
+        case_no: 4,
         case_title: "警告24種類で獄中王突破",
         max: 24,
       },
@@ -74,6 +77,14 @@ describe Answer do
           # -- when --
           rubocop_stdout = `rubocop ./lib/answer.rb`
           actual = rubocop_stdout.each_line.select {|v|v.count(":") == 4}.map {|v|v.split(":")[4].chop}.uniq
+          if c[:case_no] == 4
+            puts "%%%%%%%%%%%%%%%%%%%%%%%"
+            puts "警告種類=#{actual.size}"
+            puts "===警告内容 start==="
+            actual.each_with_index {|warning, i|puts "\t#{i+1},#{warning}"}
+            puts "===警告内容   end==="
+            puts "%%%%%%%%%%%%%%%%%%%%%%%"
+          end
 
           # -- then --
           expect(actual.size).to be >= c[:max]
