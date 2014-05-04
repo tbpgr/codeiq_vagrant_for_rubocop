@@ -59,6 +59,7 @@ vagrant ssh
 * フォルダ構成を確認します
 
 ~~~
+$ cd /home/vagrant/codeiq_vagrant_for_rubocop/root
 $ tree
 .
 |-- level1
@@ -77,7 +78,6 @@ $ tree
 |   `-- spec
 |       |-- answer_spec.rb
 |       `-- spec_helper.rb
-|-- postinstall.sh
 `-- sample
     |-- lib
     |   `-- answer.rb
@@ -90,9 +90,9 @@ $ tree
 
 * 各フォルダについて
 
-    * /home/vagrant/level1 => level1 問題用作業フォルダ
-    * /home/vagrant/level2 => level2 問題用作業フォルダ
-    * /home/vagrant/sample => 好きにご利用ください
+    * /home/vagrant/codeiq_vagrant_for_rubocop/root/level1 => level1 問題用作業フォルダ
+    * /home/vagrant/codeiq_vagrant_for_rubocop/root/level2 => level2 問題用作業フォルダ
+    * /home/vagrant/codeiq_vagrant_for_rubocop/root/sample => 好きにご利用ください
 
 * 各ファイルについて
 
@@ -112,7 +112,7 @@ Inspecting 1 file
 1 file inspected, no offenses detected
 ~~~
 
-/home/vagrant/sample/lib/answer.rbを編集して警告が1個出るコードを作成します  
+/home/vagrant/codeiq_vagrant_for_rubocop/root/sample/lib/answer.rbを編集して警告が1個出るコードを作成します  
 
 ~~~ruby
 # Answer
@@ -142,7 +142,7 @@ lib/answer.rb:4:5: C: Prefer single-quoted strings when you don't need string in
 RSpecのテストを動かしてみます。
 
 ~~~bash
-$ cd /home/vagrant/sample/
+$ cd /home/vagrant/codeiq_vagrant_for_rubocop/root/sample/
 $ rspec -fd
 Run options: include {:focus=>true}
 
