@@ -2,8 +2,6 @@ EmptyLines:
   Enabled: false
 EmptyLinesAroundBody:
   Enabled: false
-FinalNewline:
-  Enabled: false
 IndentationWidth:
   Enabled: false
 LeadingCommentSpace:
