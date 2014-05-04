@@ -4,3 +4,7 @@ SpaceAroundOperators:
   Enabled: false
 UselessAssignment:
   Enabled: false
+LiteralInCondition:
+  Enabled: true
+TrailingBlankLines:
+  EnforcedStyle: final_blank_line

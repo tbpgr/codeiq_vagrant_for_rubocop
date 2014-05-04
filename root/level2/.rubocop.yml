@@ -24,3 +24,7 @@ SpaceInsideHashLiteralBraces:
   EnforcedStyle: no_space
 UselessAssignment:
   Enabled: false
+LiteralInCondition:
+  Enabled: true
+TrailingBlankLines:
+  EnforcedStyle: final_blank_line
