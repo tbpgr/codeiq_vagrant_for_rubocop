@@ -44,23 +44,23 @@ describe Answer do
     cases = [
       {
         case_no: 1,
-        case_title: "警告2種類で小悪党突破",
-        max: 2,
-      },
-      {
-        case_no: 1,
-        case_title: "警告4種類で悪党突破",
-        max: 4,
-      },
-      {
-        case_no: 1,
-        case_title: "警告6種類で極悪人突破",
+        case_title: "警告6種類で小悪党突破",
         max: 6,
       },
       {
         case_no: 1,
-        case_title: "警告10種類で獄中王突破",
-        max: 10,
+        case_title: "警告12種類で悪党突破",
+        max: 12,
+      },
+      {
+        case_no: 1,
+        case_title: "警告18種類で極悪人突破",
+        max: 18,
+      },
+      {
+        case_no: 1,
+        case_title: "警告24種類で獄中王突破",
+        max: 24,
       },
     ]
 
