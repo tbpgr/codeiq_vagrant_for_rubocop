@@ -8,3 +8,5 @@ LiteralInCondition:
   Enabled: false
 TrailingBlankLines:
   EnforcedStyle: final_blank_line
+TrailingBlankLines:
+  Enabled: false
