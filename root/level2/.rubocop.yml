@@ -1,0 +1,26 @@
+EmptyLines:
+  Enabled: false
+EmptyLinesAroundBody:
+  Enabled: false
+FinalNewline:
+  Enabled: false
+IndentationWidth:
+  Enabled: false
+LeadingCommentSpace:
+  Enabled: false
+SpaceAfterComma:
+  Enabled: false
+SpaceAroundOperators:
+  Enabled: false
+SpaceBeforeBlockBraces:
+  Enabled: false
+SpaceInsideBlockBraces:
+  EnforcedStyle: no_space
+SpaceInsideParens:
+  Enabled: false
+Void:
+  Enabled: false
+SpaceInsideHashLiteralBraces:
+  EnforcedStyle: no_space
+UselessAssignment:
+  Enabled: false

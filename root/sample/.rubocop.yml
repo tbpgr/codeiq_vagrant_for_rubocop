@@ -1,0 +1,6 @@
+Void:
+  Enabled: false
+SpaceAroundOperators:
+  Enabled: false
+UselessAssignment:
+  Enabled: false
