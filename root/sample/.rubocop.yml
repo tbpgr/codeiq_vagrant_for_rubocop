@@ -5,6 +5,6 @@ SpaceAroundOperators:
 UselessAssignment:
   Enabled: false
 LiteralInCondition:
-  Enabled: true
+  Enabled: false
 TrailingBlankLines:
   EnforcedStyle: final_blank_line
