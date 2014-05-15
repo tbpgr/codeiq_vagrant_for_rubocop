@@ -3,17 +3,17 @@ require "spec_helper"
 require "answer"
 
 describe Answer do
-  context "ソースコードが100文字以下であること" do
+  context "ソースコードの長さ" do
     cases = [
       {
         case_no: 1,
-        case_title: "check source length",
+        case_title: "文字以下",
         max: 100,
       },
     ]
 
     cases.each do |c|
-      it "#{c[:case_title]}" do
+      it "#{c[:max]}#{c[:case_title]}" do
         begin
           case_before c
 
@@ -47,22 +47,22 @@ describe Answer do
     cases = [
       {
         case_no: 1,
-        case_title: "警告6種類で小悪党突破",
+        case_title: "警告6種類で小悪党バッジ取得",
         max: 6,
       },
       {
         case_no: 2,
-        case_title: "警告12種類で悪党突破",
+        case_title: "警告12種類で悪党バッジ取得",
         max: 12,
       },
       {
         case_no: 3,
-        case_title: "警告18種類で極悪人突破",
+        case_title: "警告18種類で極悪人バッジ取得",
         max: 18,
       },
       {
         case_no: 4,
-        case_title: "警告24種類で獄中王突破",
+        case_title: "警告24種類で獄中王バッジ取得",
         max: 24,
       },
     ]
@@ -76,7 +76,7 @@ describe Answer do
 
           # -- when --
           rubocop_stdout = `rubocop ./lib/answer.rb`
-          actual = rubocop_stdout.each_line.select {|v|v.count(":") == 4}.map {|v|v.split(":")[4].chop}.uniq
+          actual = rubocop_stdout.each_line.select {|v|v.count(":") == 4}.map {|v|v.split(":")[4].chop}.sort.uniq
           if c[:case_no] == 4
             puts "%%%%%%%%%%%%%%%%%%%%%%%"
             puts "警告種類=#{actual.size}"
