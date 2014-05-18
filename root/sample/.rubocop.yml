@@ -14,3 +14,5 @@ EndOfLine:
   Enabled: false
 UnusedMethodArgument:
   Enabled: false
+UnusedBlockArgument:
+  Enabled: false
