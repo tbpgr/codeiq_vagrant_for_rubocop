@@ -30,3 +30,5 @@ TrailingBlankLines:
   Enabled: false
 EndOfLine:
   Enabled: false
+UnusedMethodArgument:
+  Enabled: false
