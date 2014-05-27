@@ -24,7 +24,7 @@
 * VirtualBox 4.3.10
 
 ## 利用手順
-* 当リポジトリをclone
+* 当リポジトリをclone(gitを利用していない場合は、Download ZIPボタンを押してZIPをダウンロードして解凍ください)
 
 ~~~
 git clone https://github.com/tbpgr/codeiq_vagrant_for_rubocop.git
@@ -32,7 +32,23 @@ git clone https://github.com/tbpgr/codeiq_vagrant_for_rubocop.git
 
 * cloneしたフォルダに移動
 
-* VMを起動
+* 32bit版 Ubuntu 利用する場合（64bit版 Ubuntu を利用する場合は特に対応不要）
+
+Vagrantfileの下記部分を
+
+~~~ruby
+  config.vm.box = "precise64"
+  config.vm.box_url = 'http://files.vagrantup.com/precise64.box'
+~~~
+
+下記に変更してください
+
+~~~ruby
+  config.vm.box = "precise32"
+  config.vm.box_url = 'http://files.vagrantup.com/precise32.box'
+~~~
+
+* ターミナルソフトから下記コマンドを実行してVMを起動
 
 ~~~
 vagrant up
