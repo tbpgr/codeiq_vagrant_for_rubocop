@@ -38,14 +38,12 @@ Vagrantfileの下記部分を
 
 ~~~ruby
   config.vm.box = "precise64"
-  config.vm.box_url = 'http://files.vagrantup.com/precise64.box'
 ~~~
 
 下記に変更してください
 
 ~~~ruby
   config.vm.box = "precise32"
-  config.vm.box_url = 'http://files.vagrantup.com/precise32.box'
 ~~~
 
 * ターミナルソフトから下記コマンドを実行してVMを起動
